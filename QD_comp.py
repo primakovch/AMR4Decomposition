@@ -14,7 +14,7 @@ punc = string.punctuation
 import spacy
 spacy_nlp = spacy.load("en_core_web_sm")
 from stanfordcorenlp import StanfordCoreNLP
-nlp = StanfordCoreNLP(r'stanford-corenlp-full-2018-10-05')
+nlp = StanfordCoreNLP('http://localhost', port=9000)
 props = {'annotators': 'pos,lemma',
          'pipelineLanguage': 'en',
          'outputFormat': 'json'}

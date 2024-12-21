@@ -17,7 +17,7 @@ from nltk.stem import PorterStemmer
 ps = PorterStemmer()
 
 from stanfordcorenlp import StanfordCoreNLP
-nlp = StanfordCoreNLP(r'stanford-corenlp-full-2018-10-05')
+nlp = StanfordCoreNLP('http://localhost', port=9000)
 props = {'annotators': 'pos,lemma',
          'pipelineLanguage': 'en',
          'outputFormat': 'json'}
